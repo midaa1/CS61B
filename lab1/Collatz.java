@@ -3,14 +3,18 @@
  */
 public class Collatz {
 
-    /** Buggy implementation of nextNumber! */
+    /**
+     * Function to get the next number in collatz sequence
+     * @param n The number i need next to it.
+     * @return The next number of n
+     */
     public static int nextNumber(int n) {
-        if (n  == 128) {
+        if (n  == 1) {
             return 1;
-        } else if (n == 5) {
+        } else if (n %2 != 0) {
             return 3 * n + 1;
         } else {
-            return n * 2;
+            return n / 2;
         }
     }
 
